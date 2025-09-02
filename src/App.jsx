@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Category from "./components/Category";
@@ -35,10 +35,14 @@ const BannerData2 = {
   bgColor: "#2dcc6f",
 };
 function App() {
+  const [orderPopup, setOrderPopup] = useState(false);
+  const handleOrderPopup = () => {
+    setOrderPopup(!orderPopup);
+  };
   return (
     <div className="bg-gray-50 dark:bg-blue-950 dark:text-white overflow-hidden duration-200">
-      <Navbar />
-      <Hero />
+      <Navbar handleOrderPopup={handleOrderPopup} />
+      <Hero handleOrderPopup={handleOrderPopup} />
       <Category />
       <Category2 />
       <Services />
@@ -48,7 +52,7 @@ function App() {
       <Blogs />
       <Partners />
       <Footer />
-      <Popup />
+      <Popup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />
     </div>
   );
 }
