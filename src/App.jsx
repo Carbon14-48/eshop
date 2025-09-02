@@ -8,6 +8,7 @@ import Banner from "./components/Banner";
 import headphone from "./assets/hero/headphone.png";
 import Products from "./components/Products";
 import smartwatch2 from "./assets/category/smartwatch2.png";
+import Blogs from "./components/Blogs";
 const BannerData = {
   discount: "30% OFF",
   title: "Fine Smike",
@@ -41,7 +42,7 @@ function App() {
       <Banner data={BannerData} />
       <Products />
       <Banner data={BannerData2} />
-      <
+      <Blogs />
     </div>
   );
 }
