@@ -36,7 +36,8 @@ function Banner({ data }) {
             <p className="text-sm tracking-wide leading-5">{data.title4}</p>
             <div>
               <button
-                className="bg-white text-primary py-2 px-4 
+                style={{ color: data.bgColor }}
+                className="bg-white  py-2 px-4 
               rounded-full hover:scale-103 cursor-pointer font-bold"
               >
                 Shop Now
