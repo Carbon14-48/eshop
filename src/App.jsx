@@ -9,6 +9,9 @@ import headphone from "./assets/hero/headphone.png";
 import Products from "./components/Products";
 import smartwatch2 from "./assets/category/smartwatch2.png";
 import Blogs from "./components/Blogs";
+import Partners from "./components/Partners";
+import Footer from "./components/Footer";
+import Popup from "./components/Popup";
 const BannerData = {
   discount: "30% OFF",
   title: "Fine Smike",
@@ -43,6 +46,9 @@ function App() {
       <Products />
       <Banner data={BannerData2} />
       <Blogs />
+      <Partners />
+      <Footer />
+      <Popup />
     </div>
   );
 }
