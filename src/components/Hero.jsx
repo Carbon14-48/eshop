@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import Image1 from "../assets/hero/headphone.png";
 import Image2 from "../assets/category/vr.png";
 import Image3 from "../assets/category/macbook.png";
-
 const HeroData = [
   {
     id: 1,
@@ -41,15 +40,13 @@ function Hero() {
     pauseOnFocus: true,
   };
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-8 lg:py-12">
-      <div className="mx-4 lg:mx-8">
+    <div className=" bg-gray-50 dark:bg-blue-950 pt-8 mb-0 pb-16">
+      <div className="mx-4 lg:mx-8 mb-0">
         <div className="max-w-7xl mx-auto bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden">
           <div className="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-800 dark:via-purple-800 dark:to-pink-800">
             <div className="absolute inset-0 bg-black/20 dark:bg-black/40"></div>
-
             <div className="absolute top-10 right-10 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
             <div className="absolute bottom-10 left-10 w-24 h-24 bg-pink-300/20 rounded-full blur-lg"></div>
-
             <div className="relative z-10 px-6 lg:px-12">
               <Slider {...settings}>
                 {HeroData.map((data) => (
@@ -63,7 +60,7 @@ function Hero() {
                         </div>
 
                         <div className="space-y-2">
-                          <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-black text-white leading-none tracking-tight">
+                          <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-8xl font-black text-white leading-none tracking-tight">
                             {data.title}
                           </h1>
                           {data.title2 && (
