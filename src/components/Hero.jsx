@@ -26,7 +26,7 @@ const HeroData = [
     title2: "Laptops",
   },
 ];
-function Hero() {
+function Hero({ openPopup }) {
   const settings = {
     dots: false,
     arrows: false,
@@ -76,7 +76,10 @@ function Hero() {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-                          <button className="group relative bg-white text-gray-900 px-8 py-4 rounded-full font-bold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                          <button
+                            onClick={openPopup}
+                            className=" cursor-pointer group relative bg-white text-gray-900 px-8 py-4 rounded-full font-bold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                          >
                             <span className="relative z-10">Shop Now</span>
                             <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
                             <span className="absolute inset-0 flex items-center justify-center text-white font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -84,7 +87,7 @@ function Hero() {
                             </span>
                           </button>
 
-                          <button className="border-2 border-white/50 text-white px-8 py-4 rounded-full font-semibold text-lg backdrop-blur-sm hover:bg-white/10 hover:border-white transition-all duration-300">
+                          <button className="cursor-pointer border-2 border-white/50 text-white px-8 py-4 rounded-full font-semibold text-lg backdrop-blur-sm hover:bg-white/10 hover:border-white transition-all duration-300">
                             Explore Collection
                           </button>
                         </div>

@@ -12,6 +12,7 @@ import Blogs from "./components/Blogs";
 import Partners from "./components/Partners";
 import Footer from "./components/Footer";
 import Popup from "./components/Popup";
+
 const BannerData = {
   discount: "30% OFF",
   title: "Fine Smike",
@@ -23,6 +24,7 @@ const BannerData = {
     "Lorem ipusm , dolor , sit amat conscutar  Tottnehma best Teams In england and Harry Kane best player in the world",
   bgColor: "#f42c37",
 };
+
 const BannerData2 = {
   discount: "25% OFF",
   title: "Happy Hours",
@@ -34,24 +36,27 @@ const BannerData2 = {
     "Lorem ipusm , dolor , sit amat conscutar  Tottnehma best Teams In england and Harry Kane best player in the world",
   bgColor: "#2dcc6f",
 };
+
 function App() {
   const [orderPopup, setOrderPopup] = useState(false);
-  const handleOrderPopup = () => {
-    setOrderPopup(!orderPopup);
+
+  const openPopup = () => {
+    setOrderPopup(true);
   };
+
   return (
     <div className="bg-gray-50 dark:bg-blue-950 dark:text-white overflow-hidden duration-200">
-      <Navbar handleOrderPopup={handleOrderPopup} />
-      <Hero handleOrderPopup={handleOrderPopup} />
-      <Category />
-      <Category2 />
-      <Services />
-      <Banner data={BannerData} />
-      <Products />
-      <Banner data={BannerData2} />
-      <Blogs />
-      <Partners />
-      <Footer />
+      <Navbar openPopup={openPopup} />
+      <Hero openPopup={openPopup} />
+      <Category openPopup={openPopup} />
+      <Category2 openPopup={openPopup} />
+      <Services openPopup={openPopup} />
+      <Banner data={BannerData} openPopup={openPopup} />
+      <Products openPopup={openPopup} />
+      <Banner data={BannerData2} openPopup={openPopup} />
+      <Blogs openPopup={openPopup} />
+      <Partners openPopup={openPopup} />
+      <Footer openPopup={openPopup} />
       <Popup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />
     </div>
   );
